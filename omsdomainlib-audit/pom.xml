@@ -18,8 +18,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.automation.app</groupId>
-            <artifactId>omsdomainlib-common</artifactId>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.1</version>
         </dependency>
     </dependencies>
 
