@@ -1,4 +1,4 @@
-package com.ebay.omsdomain.common.logger;
+package com.ebay.omsdomainlib.common.logger;
 
 /**
  * @author ylyu
@@ -8,9 +8,13 @@ package com.ebay.omsdomain.common.logger;
  */
 public class DummyLogger implements ILogger{
 
-    private static final DummyLogger instance = new DummyLogger();
+    private static final DummyLogger INSTANCE = new DummyLogger();
 
     private DummyLogger() {}
+
+    public static DummyLogger getInstance() {
+        return INSTANCE;
+    }
 
     @Override
     public void warn(String message) {

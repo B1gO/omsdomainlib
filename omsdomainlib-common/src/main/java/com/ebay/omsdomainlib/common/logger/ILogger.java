@@ -1,4 +1,4 @@
-package com.ebay.omsdomain.common.logger;
+package com.ebay.omsdomainlib.common.logger;
 
 /**
  * @author ylyu

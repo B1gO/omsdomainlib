@@ -1,4 +1,4 @@
-package com.ebay.omsdomain.common.constant;
+package com.ebay.omsdomainlib.common.constant;
 
 import java.text.SimpleDateFormat;
 

@@ -1,6 +1,6 @@
-package com.ebay.omsdomain.common.helper;
+package com.ebay.omsdomainlib.common.helper;
 
-import com.ebay.omsdomain.common.constant.DateFormat;
+import com.ebay.omsdomainlib.common.constant.DateFormat;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

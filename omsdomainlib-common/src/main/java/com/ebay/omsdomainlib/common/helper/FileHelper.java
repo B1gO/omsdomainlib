@@ -1,4 +1,7 @@
-package com.ebay.omsdomain.common.helper;
+package com.ebay.omsdomainlib.common.helper;
+
+import com.ebay.omsdomainlib.common.logger.DummyLogger;
+import com.ebay.omsdomainlib.common.logger.ILogger;
 
 import java.io.File;
 import java.io.InputStream;
@@ -12,9 +15,16 @@ import java.net.URL;
  */
 public class FileHelper {
 
+    private static final ILogger logger = DummyLogger.getInstance();
+
     public static File readResourceFile(String path) throws URISyntaxException {
         URL resource = FileHelper.class.getClassLoader().getResource(path);
-        return new File(resource.toURI());
+        if (resource != null) {
+            return new File(resource.toURI());
+        }
+
+        logger.error("Error loading report pattern: " + path, new Throwable("url is null"));
+        return null;
     }
 
     public static InputStream readResourceFileAsStream(String path) {
